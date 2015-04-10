@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Padzahr is a social enterprise. We want to democratise data, giving communities, organisations and individuals a platform from which to make decisions and influence policy.">
+    <title>Pad zahr</title>
+    <link rel="canonical" href="/">
+    <link rel="stylesheet" href="/assets/application.css?cb=3d769c6cb9c0be50bfbd92d4f5749193">
+  </head>
+  <body>
+    <div class="wrapper">
+    <header>
+<div class="container">
+  <h5 class="logo"><a href="index.html">Padzahr</a></h5>
+       <nav class="main">
+           <ul>
+               
+                   <li><a href="posts.html">Blog</a></li>
+               
+               
+               <li><a href="about.html">About</a></li>
+               
+               
+               <li><a href="index.html" class="active">Projects</a></li>
+               
+           </ul>
+       </nav>
+       <div class="nav-slider">
+           <div class="nav-selection projects"></div>
+       </div>
+       <div class="subnav-slider">
+           <div class="subnav-selection exemplar-home"></div>
+       </div>
+       
+       <nav class="subnav">
+           <ul>
+               
+                   <li><a href="/exemplar" data-subnav="padzahr-home">Home</a></li>
+               
+               
+                   <li><a href="#" data-subnav="padzahr-docs">Docs</a></li>
+               
+               
+                   <li><a href="#" data-subnav="download">Download</a></li>
+               
+           </ul>
+       </nav>
+       
+</div>
+</header>
+
+    <section id="main">
+       <article class="container">
+         <h1 class="hero">Pad zahr</h1>
+         <div class='container'></div>
+<p class='blue-paragraph'>PadZahr, from Persian; Pad means anti and Zahr means poison. Antidote:</p>
+<p class='blue-paragraph'>From free dictionary: A remedy or other agent used to neutralize or counteract the effects of a poison.</p>
+<p>Padzahr is a social enterprise. We want to democratise data, giving communities, organisations and individuals a platform from which to make decisions and influence policy.</p>
+<p>Big data has long been the domain of multinational companies and governments. With all the knowledge comes all the power. Affecting change is a challenge without hard facts to back up arguments. Our aim is to level the playing field.</p>
+<div id="projects">
+</div>
+
+       </article>
+   </section>
+
+   <footer>
+    <nav class="container">
+        <ul>
+            <li>&copy; Padzahr 2015</li>
+        </ul>
+    </nav>
+</footer>
+
+</body>
+<script type="text/javascript" charset="utf-8">
+    document.onreadystatechange = function() {
+        if ( document.readyState == 'complete' ) {
+            var active = document.querySelector( 'header nav.main a.active' ).innerHTML.toLowerCase(),
+                links = document.querySelectorAll( 'header nav.main li a'),
+                selection = document.querySelector( 'header .nav-selection' ),
+                subactive = document.querySelector( 'header nav.subnav a.active' ).dataset.subnav,
+                sublinks = document.querySelectorAll( 'header nav.subnav li a'),
+                subselection = document.querySelector( 'header .subnav-selection' ),
+                i, j, link;
+            for ( i = 0; i < links.length; i++ ) {
+                link = links[ i ];
+                link.addEventListener( 'mouseover', function() {
+                    selection.className = 'nav-selection';
+                    selection.className = 'nav-selection ' + this.innerHTML.toLowerCase();
+                });
+                link.addEventListener( 'mouseout', function() {
+                    selection.className = 'nav-selection ' + active;
+                });
+            }
+            for ( i = 0; i < sublinks.length; i++ ) {
+                link = sublinks[ i ];
+                link.addEventListener( 'mouseover', function() {
+                    subselection.className = 'subnav-selection';
+                    subselection.className = 'subnav-selection ' + this.dataset.subnav;
+                });
+                link.addEventListener( 'mouseout', function() {
+                    subselection.className = 'subnav-selection ' + subactive;
+                });
+            }
+        }
+    };
+</script>
+
+</html>

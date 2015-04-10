@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Padzahr is a social enterprise. We want to democratise data, giving communities, organisations and individuals a platform from which to make decisions and influence policy.">
+    <title>Padzahr</title>
+    <link rel="canonical" href="/posts.html">
+    <link rel="stylesheet" href="/assets/application.css?cb=3d769c6cb9c0be50bfbd92d4f5749193">
+  </head>
+  <body>
+    <div class="wrapper">
+    <header>
+<div class="container">
+  <h5 class="logo"><a href="index.html">Padzahr</a></h5>
+       <nav class="main">
+           <ul>
+               
+                   <li><a href="posts.html">Blog</a></li>
+               
+               
+               <li><a href="about.html">About</a></li>
+               
+               
+               <li><a href="index.html">Projects</a></li>
+               
+           </ul>
+       </nav>
+       <div class="nav-slider">
+           <div class="nav-selection "></div>
+       </div>
+       <div class="subnav-slider">
+           <div class="subnav-selection "></div>
+       </div>
+       
+</div>
+</header>
+
+    <section id="main">
+       <article class="container">
+         <h1 class="hero"></h1>
+         <div id='home'>
+  <h1>Posts</h1>
+  <ul class='posts'>
+    <li>
+      <span>
+        10 Apr 2015 &raquo; <a href="/update/2015/04/10/welcome-to-jekyll.html">Welcome to Padzahr!</a>
+      </span>
+    </li>
+  </ul>
+</div>
+
+       </article>
+   </section>
+
+   <footer>
+    <nav class="container">
+        <ul>
+            <li>&copy; Padzahr 2015</li>
+        </ul>
+    </nav>
+</footer>
+
+</body>
+<script type="text/javascript" charset="utf-8">
+    document.onreadystatechange = function() {
+        if ( document.readyState == 'complete' ) {
+            var active = document.querySelector( 'header nav.main a.active' ).innerHTML.toLowerCase(),
+                links = document.querySelectorAll( 'header nav.main li a'),
+                selection = document.querySelector( 'header .nav-selection' ),
+                subactive = document.querySelector( 'header nav.subnav a.active' ).dataset.subnav,
+                sublinks = document.querySelectorAll( 'header nav.subnav li a'),
+                subselection = document.querySelector( 'header .subnav-selection' ),
+                i, j, link;
+            for ( i = 0; i < links.length; i++ ) {
+                link = links[ i ];
+                link.addEventListener( 'mouseover', function() {
+                    selection.className = 'nav-selection';
+                    selection.className = 'nav-selection ' + this.innerHTML.toLowerCase();
+                });
+                link.addEventListener( 'mouseout', function() {
+                    selection.className = 'nav-selection ' + active;
+                });
+            }
+            for ( i = 0; i < sublinks.length; i++ ) {
+                link = sublinks[ i ];
+                link.addEventListener( 'mouseover', function() {
+                    subselection.className = 'subnav-selection';
+                    subselection.className = 'subnav-selection ' + this.dataset.subnav;
+                });
+                link.addEventListener( 'mouseout', function() {
+                    subselection.className = 'subnav-selection ' + subactive;
+                });
+            }
+        }
+    };
+</script>
+
+</html>
