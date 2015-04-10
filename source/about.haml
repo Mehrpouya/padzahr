@@ -1,0 +1,38 @@
+---
+title: Pad zahr
+nav: projects
+subnav: exemplar-home
+layout: default
+---
+.container
+%p.blue-paragraph PadZahr, from Persian; Pad means anti and Zahr means poison. Antidote:
+%p.blue-paragraph From free dictionary: A remedy or other agent used to neutralize or counteract the effects of a poison.
+
+%p Padzahr is a social enterprise. We want to democratise data, giving communities, organisations and individuals a platform from which to make decisions and influence policy.
+%p Big data has long been the domain of multinational companies and governments. With all the knowledge comes all the power. Affecting change is a challenge without hard facts to back up arguments. Our aim is to level the playing field.
+
+
+
+
+<div id="projects">
+  {% for page in site.pages %}
+    {% if page.box == true %}
+      {% if page.link %}
+        <a class="project" href="{{ page.link }}">
+      {% else %}
+        <a class="project" href="{{ page.url | replace: '/index.html', '' }}">
+      {% endif %}
+          <div class="project-header">
+              <h2>
+                  {{ page.title }}
+              </h2>
+          </div>
+          <div class="project-body">
+            <p>
+                {{ page.summary }}
+            </p>
+          </div>
+        </a>
+    {% endif %}
+  {% endfor %}
+</div>

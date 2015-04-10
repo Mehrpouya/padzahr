@@ -1,32 +1,80 @@
-#Exemplar
+# Proteus - Jekyll
 
-This is my jekyll site template. Used for blog and project pages.
+## About Proteus
 
-#Getting Started
+[Proteus](http://github.com/thoughtbot/proteus) is a collection of useful
+starter kits to help you prototype faster. It follows the
+[thoughtbot styleguide](https://github.com/thoughtbot/guides) and includes our
+favorite front end tools.
 
-First, make sure you have the `jekyll` and `sass` gems installed. In your terminal run:
+## About Jekyll
 
-    gem install jekyll
-    gem install sass
+Jekyll is a static site generator built in Ruby. This makes it a great fit
+for projects that may end up as a Ruby on Rails app.
 
-You can optionally install the *bourbon* gem in order to update the Bourbon folder:
+## Includes
 
-    gem install bourbon
-    cd _sass
-    bourbon install
+* [HAML](http://haml.info):
+  Simple template markup
+* [Coffeescript](http://coffeescript.org):
+  Write javascript with simpler syntax
+* [Sass](http://sass-lang.com):
+  CSS with superpowers
+* [Bourbon](http://bourbon.io):
+  Sass mixin library
+* [Neat](http://neat.bourbon.io):
+  Semantic grid for Sass and Bourbon
+* [Bitters](http://bitters.bourbon.io):
+  Scaffold styles, variables and structure for Bourbon projects.
 
-Start running Jekyll (defaults to port 4000) and watching Sass:
+We also recommend [Refills](http://refills.bourbon.io/) for prepackaged interface patterns.
 
-    rake // 'rake watch' also works
+## Getting Started
 
-Before deploying your site, stop `rake watch` and run `rake generate` to generate a production-ready site (no Scss comments).
+Set up your project in your code directory
+```
+git clone git@github.com:thoughtbot/proteus-jekyll.git your-project-folder
+cd your-project-folder
+git remote rm origin
+git remote add origin your-repo-url
+```
 
-## Updating Bourbon
+Install dependencies
+```
+bundle install
+```
 
-In order to update the Bourbon folder:
+Run the server and watch for changes in your files
+```
+jekyll serve -w
+```
 
-    cd _sass/
-    bourbon update
-    
+Deploy to Github Pages
+```
+jekyll build && git subtree push --prefix build origin gh-pages
+```
 
-[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/tybenz/exemplar/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
+Or install the [Proteus gem](https://github.com/thoughtbot/proteus) and enjoy some shortcuts.
+
+Stylesheets, fonts, images, and javascript files go in the `/source/_assets/` directory.
+Vendor stylesheets and javascripts should go in each of their `/vendor/` directories.
+
+## Issues
+
+If you have problems, please create a
+[GitHub Issue](https://github.com/thoughtbot/proteus-jekyll/issues).
+
+## Contributing
+
+Have a fix or want to add a feature?
+[Pull Requests](https://github.com/thoughtbot/proteus-jekyll/pulls) are welcome!
+
+## Credits
+
+[![thoughtbot](http://images.thoughtbot.com/bourbon/thoughtbot-logo.svg)](http://thoughtbot.com)
+
+Proteus Jekyll is maintained and funded by [thoughtbot, inc](http://thoughtbot.com). Thank you to all of [the contributors](https://github.com/thoughtbot/proteus-jekyll/contributors)!
+
+## License
+
+Copyright © 2014–2015 [thoughtbot, inc](http://thoughtbot.com). Proteus Jekyll is free software, and may be redistributed under the terms specified in the [license](LICENSE.md).
