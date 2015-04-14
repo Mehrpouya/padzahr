@@ -147,6 +147,18 @@ header nav ul {
 
 header .logo {
     font-style: italic;
+    a img {
+
+      height:80px;
+      display: inline-block;
+      margin-left: auto;
+    margin-right: auto;
+    vertical-align:middle;
+    }
+    a{
+      margin-bottom: 50%;
+    }
+
 }
 
 header nav li {
@@ -386,4 +398,5 @@ pre {
 
 .blue-paragraph{
   color: #003366;
+  font-style:italic;
 }

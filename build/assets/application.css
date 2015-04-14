@@ -689,6 +689,14 @@ header nav ul {
 
 header .logo {
   font-style: italic; }
+  header .logo a img {
+    height: 80px;
+    display: inline-block;
+    margin-left: auto;
+    margin-right: auto;
+    vertical-align: middle; }
+  header .logo a {
+    margin-bottom: 50%; }
 
 header nav li {
   float: left; }
@@ -891,7 +899,8 @@ pre {
   color: #6EC5FF; }
 
 .blue-paragraph {
-  color: #003366; }
+  color: #003366;
+  font-style: italic; }
 
 html, body, div, span, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
