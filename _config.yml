@@ -1,0 +1,21 @@
+gems: [bourbon, neat]
+
+# Structure configuration
+source: source
+destination: build
+
+assets:
+  cachebust: soft
+# Site settings
+title: Padzahr
+description: Padzahr is a social enterprise. We want to democratise data, giving communities, organisations and individuals a platform from which to make decisions and influence policy.
+
+# Name of project on Github
+baseurl:
+
+# Build settings
+markdown: kramdown
+
+kramdown:
+  input: GFM
+  
